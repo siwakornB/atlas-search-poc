@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  atlas:
+    image: mongo:latest
+    container_name: atlas
+    ports:
+      - "27018:27017" # Expose default MongoDB port
+    volumes:
+      - "D:\\mongo_mount:/mnt" # Mount external directory to container
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin # Replace with your preferred username
+      MONGO_INITDB_ROOT_PASSWORD: password # Replace with your preferred password
